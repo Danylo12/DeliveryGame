@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{2BDF921D-A3F0-E9F9-2A51-A6E9C5AD95B7}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Driver.cs">
+    <Files>
+      <File FileName="Assets/Driver.cs" Line="42" Column="6" />
+      <File FileName="Assets/FollowCamera.cs" />
+      <File FileName="Assets/Delivery.cs" />
+      <File FileName="Assets/Health.cs" Line="14" Column="31" />
+      <File FileName="Assets/Progress.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Delivery Game" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="NoobGameDev" expanded="True">
+                <Node name="Health System For Dummies" expanded="True">
+                  <Node name="System" expanded="True">
+                    <Node name="Bar" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Driver.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3041508d-13d5-465b-9cc1-097b318bc5e2" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
