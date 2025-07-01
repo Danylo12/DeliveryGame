@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float steerSpeed = 0.1f;
+    [SerializeField] float steerSpeed = 200f;
     [SerializeField] float moveSpeed = 9f;
     [SerializeField] float slowSpeed = 9f;
     [SerializeField] float boostSpeed = 20f;
@@ -33,11 +33,7 @@ public class Driver : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         moveSpeed = slowSpeed;
-<<<<<<< HEAD
-        TakeDamage(10);
-=======
         TakeDamage(5);
->>>>>>> 4e3e2fd6 (Start Commit)
         if (currentHealth <= 0)
         {
             GameOver();

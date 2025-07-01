@@ -10,7 +10,7 @@ public class Delivery : MonoBehaviour
     bool hasPackage;
 
     SpriteRenderer spriteRenderer;
- 
+
     List<GameObject> gameObjects = new List<GameObject>();
     List<GameObject> packages = new List<GameObject>();
 
@@ -47,6 +47,7 @@ public class Delivery : MonoBehaviour
         progress.SetMinProgress(minProgress);
 
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Package" && !hasPackage)
@@ -59,6 +60,7 @@ public class Delivery : MonoBehaviour
             n = n + 1;
 
         }
+
         if (other.tag == "Person" && hasPackage)
         {
             addProgress();
@@ -66,6 +68,7 @@ public class Delivery : MonoBehaviour
             {
                 driver.GameOver();
             }
+
             hasPackage = false;
             Debug.Log("Package was delivered");
             spriteRenderer.color = noPickedColor;
@@ -73,7 +76,7 @@ public class Delivery : MonoBehaviour
             packages[count].SetActive(true);
             count = count + 1;
 
-            
+
         }
 
     }
@@ -83,8 +86,4 @@ public class Delivery : MonoBehaviour
         currentProgress = currentProgress + 1;
         progress.SetProgress(currentProgress);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4e3e2fd6 (Start Commit)

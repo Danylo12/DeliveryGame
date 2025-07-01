@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Package
-  - Person
-  - Boost
-  - Customer
-  - Here
-<<<<<<< HEAD
-=======
-  - Start
->>>>>>> 4e3e2fd6 (Start Commit)
+  tags: []
   layers:
   - Default
   - TransparentFX

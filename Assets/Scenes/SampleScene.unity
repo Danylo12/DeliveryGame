@@ -2187,16 +2187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fd0b714982a24ba784c3ba7a9ad5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBillboarded: 1
-  shouldShowHealthNumbers: 1
-  finalValue: 0
-  animationSpeed: 0.1
-  leftoverAmount: 0
-  healthSystem: {fileID: 0}
-  image: {fileID: 0}
-  text: {fileID: 0}
-  followCameraRotation: {fileID: 0}
-
 --- !u!114 &254095905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10267,6 +10257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e89f3fcffe24b04aac8a90f23ac5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  steerSpeed: 200
   moveSpeed: 9
   slowSpeed: 9
   boostSpeed: 20
@@ -15246,17 +15237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1fd0b714982a24ba784c3ba7a9ad5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steerSpeed: 200
-  isBillboarded: 1
-  shouldShowHealthNumbers: 1
-  finalValue: 0
-  animationSpeed: 0.1
-  leftoverAmount: 0
-  healthSystem: {fileID: 0}
-  image: {fileID: 0}
-  text: {fileID: 0}
-  followCameraRotation: {fileID: 0}
-
 --- !u!114 &1937300104
 MonoBehaviour:
   m_ObjectHideFlags: 0
