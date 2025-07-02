@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class Delivery : MonoBehaviour
 {
     [SerializeField] Color32 pickedColor = new Color32(1, 1, 1, 1);
     [SerializeField] Color32 noPickedColor = new Color32(0, 0, 0, 0);
+
+    [SerializeField] Transform pointer;
+    [SerializeField] Transform target;
 
     bool hasPackage;
 
@@ -64,6 +68,17 @@ public class Delivery : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (target != null)
+        {
+            Vector3 direction = target.position - pointer.position;
+            direction.Normalize();
+            pointer.up = direction;
+        }
+
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Package" && !hasPackage)
@@ -73,6 +88,7 @@ public class Delivery : MonoBehaviour
             spriteRenderer.color = pickedColor;
             other.gameObject.SetActive(false);
             gameObjects[n].SetActive(true);
+            target = gameObjects[n].transform;
             n = n + 1;
 
         }
@@ -90,6 +106,7 @@ public class Delivery : MonoBehaviour
             spriteRenderer.color = noPickedColor;
             other.gameObject.SetActive(false);
             packages[count].SetActive(true);
+            target = packages[count].transform;
             count = count + 1;
 
 
