@@ -45,12 +45,14 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.16f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Back.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/CurrentHealth.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/Bar/FollowCameraRotation.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/CharacterAnimation.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnIsAliveChangedEvent.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/AnimationSlider.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/Exit.cs" />
     <Compile Include="Assets/Scripts/StartButton.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/SliderValueToText.cs" />
     <Compile Include="Assets/Scripts/Progress.cs" />

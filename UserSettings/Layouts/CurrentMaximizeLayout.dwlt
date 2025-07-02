@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 19487
+  controlID: 43338
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 19488
+  controlID: 43339
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 19489
+  controlID: 43340
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,23 +241,23 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8a08fffff823ffff6224ffffca24ffff0ab5ffffd2d2ffff2cd3ffffe6d7ffffa8dbfffff6dfffff6eedffff18eeffff82eeffffb2efffff08f3ffffa0f3ffff66f7ffff72f8ffff1afbffff9c7400004e790000e07a0000c6910000d8910000fe91000022920000
+      m_ExpandedIDs: c6f2feff24f3feff7af3feffc8f3feffb204ffff5005ffffa405fffffc05ffff8a08fffff823ffff6224ffffca24ffff0ab5ffffd2d2ffff2cd3ffffe6d7ffffa8dbfffff6dfffff6eedffff18eeffff82eeffffb2efffff08f3ffffa0f3ffff66f7ffff72f8ffff1afbffff9c7400004e790000e07a0000c6910000d8910000fe910000229200004a24010066240100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Road 2 (1)
-        m_OriginalName: Road 2 (1)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -32868
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -674,9 +674,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -37.09391, y: 13.352037, z: -1.5019255}
+    m_Target: {x: -53.55404, y: 55.772797, z: -2.8505342}
     speed: 2
-    m_Value: {x: -37.09391, y: 13.352037, z: -1.5019255}
+    m_Value: {x: -53.55404, y: 55.772797, z: -2.8505342}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -726,9 +726,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 58.55704
+    m_Target: 193.41847
     speed: 2
-    m_Value: 58.55704
+    m_Value: 193.41847
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -885,7 +885,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/imgs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -893,15 +893,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/imgs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/danylosapizhuk/Desktop/projects/Delivery Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24620000
-    m_LastClickedID: 25124
+    m_SelectedIDs: 327b0000
+    m_LastClickedID: 31538
     m_ExpandedIDs: 00000000f2610000f4610000f6610000f8610000fa610000fc610000fe61000000620000026200000462000006620000086200000a6200000c6200000e620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
