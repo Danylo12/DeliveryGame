@@ -18,10 +18,18 @@ public class Delivery : MonoBehaviour
     [SerializeField] GameObject g2;
     [SerializeField] GameObject g3;
     [SerializeField] GameObject g4;
+    [SerializeField] GameObject g5;
+    [SerializeField] GameObject g6;
+    [SerializeField] GameObject g7;
+    [SerializeField] GameObject g8;
 
     [SerializeField] GameObject p;
     [SerializeField] GameObject p2;
     [SerializeField] GameObject p3;
+    [SerializeField] GameObject p4;
+    [SerializeField] GameObject p5;
+    [SerializeField] GameObject p6;
+    [SerializeField] GameObject p7;
 
     int n = 0;
     int count = 0;
@@ -40,9 +48,17 @@ public class Delivery : MonoBehaviour
         gameObjects.Add(g2);
         gameObjects.Add(g3);
         gameObjects.Add(g4);
+        gameObjects.Add(g5);
+        gameObjects.Add(g6);
+        gameObjects.Add(g7);
+        gameObjects.Add(g8);
         packages.Add(p);
         packages.Add(p2);
         packages.Add(p3);
+        packages.Add(p4);
+        packages.Add(p5);
+        packages.Add(p6);
+        packages.Add(p7);
         currentProgress = minProgress;
         progress.SetMinProgress(minProgress);
 
@@ -64,7 +80,7 @@ public class Delivery : MonoBehaviour
         if (other.tag == "Person" && hasPackage)
         {
             addProgress();
-            if (currentProgress == 4)
+            if (currentProgress == 8)
             {
                 driver.GameOver();
             }
