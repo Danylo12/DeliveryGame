@@ -7,8 +7,6 @@ public class Driver : MonoBehaviour
 {
     [SerializeField] float steerSpeed = 200f;
     [SerializeField] float moveSpeed = 9f;
-    [SerializeField] float slowSpeed = 9f;
-    [SerializeField] float boostSpeed = 20f;
     [SerializeField] int maxHealth = 100;
     [SerializeField] int currentHealth = 100;
 
@@ -33,20 +31,10 @@ public class Driver : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        moveSpeed = slowSpeed;
-        TakeDamage(5);
+        TakeDamage(3);
         if (currentHealth <= 0)
         {
             GameOver();
-        }
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Boost")
-        {
-            moveSpeed = boostSpeed;
         }
         
     }
