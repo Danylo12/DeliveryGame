@@ -37199,7 +37199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steerSpeed: 200
-  moveSpeed: 9
+  moveSpeed: 7.5
   maxHealth: 100
   currentHealth: 100
   healthbar: {fileID: 254095906}

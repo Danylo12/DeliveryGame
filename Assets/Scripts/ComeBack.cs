@@ -14,7 +14,7 @@ public class ComeBack : MonoBehaviour
 
     IEnumerator ExampleCoroutine()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("MenuScene");
     }
 }

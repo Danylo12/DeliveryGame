@@ -71,6 +71,7 @@
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/SmoothingToggle.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/NoobGameDevUtilities/PrefabUtilities.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/OnCurrentHealthChanged.cs" />
+    <Compile Include="Assets/Scripts/Counter.cs" />
     <Compile Include="Assets/Scripts/Delivery.cs" />
     <Compile Include="Assets/Scripts/SkinButton.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
