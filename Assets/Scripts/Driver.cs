@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Driver : MonoBehaviour
 {
+    
     [SerializeField] float steerSpeed = 200f;
     [SerializeField] float moveSpeed = 9f;
     [SerializeField] int maxHealth = 100;
@@ -16,6 +17,7 @@ public class Driver : MonoBehaviour
 
     private void Start()
     {
+        
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
 

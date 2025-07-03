@@ -72,6 +72,7 @@
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/NoobGameDevUtilities/PrefabUtilities.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/OnCurrentHealthChanged.cs" />
     <Compile Include="Assets/Scripts/Delivery.cs" />
+    <Compile Include="Assets/Scripts/SkinButton.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
