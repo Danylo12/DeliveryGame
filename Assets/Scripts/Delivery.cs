@@ -98,7 +98,7 @@ public class Delivery : MonoBehaviour
             addProgress();
             if (currentProgress == 8)
             {
-                driver.GameOver();
+                driver.WinScene();
             }
 
             hasPackage = false;

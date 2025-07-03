@@ -48,8 +48,12 @@ public class Driver : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0f; // <- It will stop your game time. use it if you need it.
-        _GameOverPanel.SetActive(true); // <- Show GameOver Panel
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void WinScene()
+    {
+        SceneManager.LoadScene("WinScene");
     }
 
 }

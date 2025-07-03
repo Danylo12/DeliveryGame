@@ -48,6 +48,7 @@
     <Compile Include="Assets/Scripts/Back.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/CurrentHealth.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/Bar/FollowCameraRotation.cs" />
+    <Compile Include="Assets/Scripts/ComeBack.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/CharacterAnimation.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnIsAliveChangedEvent.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/AnimationSlider.cs" />
