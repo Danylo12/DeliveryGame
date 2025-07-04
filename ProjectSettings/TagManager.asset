@@ -8,6 +8,9 @@ TagManager:
   - Person
   - Boost
   - 2ndCanvas
+  - Heart
+  - Driver
+  - HeartLast
   layers:
   - Default
   - TransparentFX

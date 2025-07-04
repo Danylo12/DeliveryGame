@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,4 +59,22 @@ public class Driver : MonoBehaviour
         SceneManager.LoadScene("WinScene");
     }
 
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Heart")
+        {
+            addHealth(3);
+        }
+        if (other.tag == "HeartLast")
+        {
+            addHealth(3);
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    public void addHealth(int num)
+    {
+        currentHealth += num;
+        healthbar.SetHealth(currentHealth);
+    }
 }

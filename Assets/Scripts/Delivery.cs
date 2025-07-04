@@ -108,9 +108,9 @@ public class Delivery : MonoBehaviour
             packages[count].SetActive(true);
             target = packages[count].transform;
             count = count + 1;
-
-
         }
+
+
 
     }
 
