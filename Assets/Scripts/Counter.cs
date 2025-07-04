@@ -8,6 +8,7 @@ public class Counter : MonoBehaviour
     [SerializeField] Canvas c2;
     [SerializeField] Canvas c3;
     [SerializeField] Canvas c4;
+    [SerializeField] Canvas c5;
     private List<Canvas> c = new List<Canvas>();
     private int n = 0;
     
@@ -17,6 +18,7 @@ public class Counter : MonoBehaviour
         c.Add(c2);
         c.Add(c3);
         c.Add(c4);
+        c.Add(c5);
         
         
     }
