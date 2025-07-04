@@ -83,7 +83,6 @@ public class Delivery : MonoBehaviour
     {
         if (other.tag == "Package" && !hasPackage)
         {
-            Debug.Log("You picked up a package");
             hasPackage = true;
             spriteRenderer.color = pickedColor;
             other.gameObject.SetActive(false);
@@ -102,7 +101,6 @@ public class Delivery : MonoBehaviour
             }
 
             hasPackage = false;
-            Debug.Log("Package was delivered");
             spriteRenderer.color = noPickedColor;
             other.gameObject.SetActive(false);
             packages[count].SetActive(true);
