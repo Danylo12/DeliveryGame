@@ -56,6 +56,7 @@ public class Delivery : MonoBehaviour
         gameObjects.Add(g6);
         gameObjects.Add(g7);
         gameObjects.Add(g8);
+        
         packages.Add(p);
         packages.Add(p2);
         packages.Add(p3);
