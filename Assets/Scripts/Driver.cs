@@ -15,7 +15,6 @@ public class Driver : MonoBehaviour
     public Health healthbar;
 
     public GameObject _GameOverPanel;
-    [SerializeField] FileSavingFoBestScore save;
     
 
     private void Start()
@@ -52,15 +51,11 @@ public class Driver : MonoBehaviour
 
     public void GameOver()
     {
-        save.SavesScore();
-        save.ReadFile();
         SceneManager.LoadScene("GameOver");
     }
 
     public void WinScene()
     {
-        save.SavesScore();
-        save.ReadFile();
         SceneManager.LoadScene("WinScene");
     }
 

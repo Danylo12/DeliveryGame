@@ -41,7 +41,6 @@ public class Delivery : MonoBehaviour
     public Progress progress;
     [SerializeField] int minProgress;
     [SerializeField] int currentProgress;
-    [SerializeField] FileSavingFoBestScore save;
 
     public Driver driver;
 
@@ -118,6 +117,5 @@ public class Delivery : MonoBehaviour
     {
         currentProgress++;
         progress.SetProgress(currentProgress);
-        save.score = currentProgress;
     }
 }
