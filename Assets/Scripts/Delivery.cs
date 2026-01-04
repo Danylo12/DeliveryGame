@@ -52,6 +52,10 @@ public class Delivery : MonoBehaviour
     [SerializeField] int minProgress;
     [SerializeField] int currentProgress;
 
+    [SerializeField] AudioClip PackageSFX;
+    [SerializeField] AudioClip PersonSFX;
+    
+
     public Driver driver;
 
 
@@ -109,6 +113,8 @@ public class Delivery : MonoBehaviour
             Hearts[n].SetActive(true);
             target = gameObjects[n].transform;
             n = n + 1;
+            AudioSource.PlayClipAtPoint(PackageSFX, Camera.main.transform.position);
+            
 
         }
 
@@ -126,6 +132,7 @@ public class Delivery : MonoBehaviour
             packages[count].SetActive(true);
             target = packages[count].transform;
             count = count + 1;
+            AudioSource.PlayClipAtPoint(PersonSFX, Camera.main.transform.position);
             
         }
 

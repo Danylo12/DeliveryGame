@@ -30083,9 +30083,10 @@ GameObject:
   - component: {fileID: 672113433}
   - component: {fileID: 672113435}
   - component: {fileID: 672113434}
+  - component: {fileID: 672113436}
   m_Layer: 0
   m_Name: Heart (7)
-  m_TagString: HeartLast
+  m_TagString: Heart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30202,6 +30203,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &672113436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672113432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c0f98dc398ff445d8d37f731f317e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &672927465
 GameObject:
   m_ObjectHideFlags: 0
@@ -45259,6 +45272,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2300365804949506584, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
+      propertyPath: ob
+      value: 
+      objectReference: {fileID: 1276206273}
     - target: {fileID: 2318901605847224314, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -56877,6 +56894,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthbar: {fileID: 921987828}
+  hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
+  heartSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   _GameOverPanel: {fileID: 0}
 --- !u!212 &1276206273
 SpriteRenderer:
@@ -57005,7 +57024,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008722782, y: 0.0097488165}
+  m_Offset: {x: -0.0026977062, y: -0.00928548}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -57016,7 +57035,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8785753, y: 1.9798284}
+  m_Size: {x: 0.85573435, y: 1.9113047}
   m_EdgeRadius: 0
 --- !u!114 &1276206278
 MonoBehaviour:
@@ -57063,6 +57082,8 @@ MonoBehaviour:
   progress: {fileID: 749044188}
   minProgress: 0
   currentProgress: 0
+  PackageSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  PersonSFX: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   driver: {fileID: 1276206272}
 --- !u!1 &1276556626
 GameObject:
@@ -92681,7 +92702,7 @@ Transform:
   m_GameObject: {fileID: 2113088027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8609, y: 2.7649, z: 0}
+  m_LocalPosition: {x: 2, y: 2.54, z: 0}
   m_LocalScale: {x: 1.0000997, y: 1.0000997, z: 1.0000997}
   m_ConstrainProportionsScale: 0
   m_Children: []

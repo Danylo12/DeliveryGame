@@ -14,6 +14,9 @@ public class Driver : MonoBehaviour
 
     public Health healthbar;
 
+    [SerializeField] AudioClip hitSFX;
+    [SerializeField] AudioClip heartSFX;
+
     public GameObject _GameOverPanel;
     
 
@@ -44,8 +47,9 @@ public class Driver : MonoBehaviour
 
     void TakeDamage(int damage)
     {
+        
         currentHealth -= damage;
-
+        AudioSource.PlayClipAtPoint(hitSFX, Camera.main.transform.position);
         healthbar.SetHealth(currentHealth);
     }
 
@@ -63,12 +67,8 @@ public class Driver : MonoBehaviour
     {
         if (other.tag == "Heart")
         {
-            addHealth(3);
-        }
-        if (other.tag == "HeartLast")
-        {
-            addHealth(3);
-            other.gameObject.SetActive(false);
+            AudioSource.PlayClipAtPoint(heartSFX, Camera.main.transform.position);
+            addHealth(5);
         }
     }
 

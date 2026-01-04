@@ -10,7 +10,6 @@ TagManager:
   - 2ndCanvas
   - Heart
   - Driver
-  - HeartLast
   layers:
   - Default
   - TransparentFX
