@@ -11,7 +11,7 @@ public class HeartTrigger : MonoBehaviour
     {
         if (other.tag == "Driver")
         {
-            this.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

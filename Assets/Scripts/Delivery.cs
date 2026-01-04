@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+
 
 public class Delivery : MonoBehaviour
 {
@@ -15,38 +17,12 @@ public class Delivery : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    List<GameObject> gameObjects = new List<GameObject>();
-    List<GameObject> packages = new List<GameObject>();
-    List<GameObject> Hearts = new List<GameObject>();
+    [SerializeField] GameObject Person;
 
-    [SerializeField] GameObject g;
-    [SerializeField] GameObject g2;
-    [SerializeField] GameObject g3;
-    [SerializeField] GameObject g4;
-    [SerializeField] GameObject g5;
-    [SerializeField] GameObject g6;
-    [SerializeField] GameObject g7;
-    [SerializeField] GameObject g8;
-
-    [SerializeField] GameObject p;
-    [SerializeField] GameObject p2;
-    [SerializeField] GameObject p3;
-    [SerializeField] GameObject p4;
-    [SerializeField] GameObject p5;
-    [SerializeField] GameObject p6;
-    [SerializeField] GameObject p7;
+    [SerializeField] GameObject Package;
     
-    [SerializeField] GameObject h;
-    [SerializeField] GameObject h2;
-    [SerializeField] GameObject h3;
-    [SerializeField] GameObject h4;
-    [SerializeField] GameObject h5;
-    [SerializeField] GameObject h6;
-    [SerializeField] GameObject h7;
+    [SerializeField] GameObject Heart;
     
-
-    int n = 0;
-    int count = 0;
 
     public Progress progress;
     [SerializeField] int minProgress;
@@ -54,6 +30,8 @@ public class Delivery : MonoBehaviour
 
     [SerializeField] AudioClip PackageSFX;
     [SerializeField] AudioClip PersonSFX;
+
+    [SerializeField] GameObject WorldObjectsList;
     
 
     public Driver driver;
@@ -62,30 +40,6 @@ public class Delivery : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        gameObjects.Add(g);
-        gameObjects.Add(g2);
-        gameObjects.Add(g3);
-        gameObjects.Add(g4);
-        gameObjects.Add(g5);
-        gameObjects.Add(g6);
-        gameObjects.Add(g7);
-        gameObjects.Add(g8);
-        
-        packages.Add(p);
-        packages.Add(p2);
-        packages.Add(p3);
-        packages.Add(p4);
-        packages.Add(p5);
-        packages.Add(p6);
-        packages.Add(p7);
-        
-        Hearts.Add(h);
-        Hearts.Add(h2);
-        Hearts.Add(h3);
-        Hearts.Add(h4);
-        Hearts.Add(h5);
-        Hearts.Add(h6);
-        Hearts.Add(h7);
         currentProgress = minProgress;
         progress.SetMinProgress(minProgress);
 
@@ -108,11 +62,13 @@ public class Delivery : MonoBehaviour
         {
             hasPackage = true;
             spriteRenderer.color = pickedColor;
+            other.transform.position = RandomPosition();
+            Package = other.gameObject;
             other.gameObject.SetActive(false);
-            gameObjects[n].SetActive(true);
-            Hearts[n].SetActive(true);
-            target = gameObjects[n].transform;
-            n = n + 1;
+            
+            Person.SetActive(true);
+            Instantiate(Heart, RandomPosition(), Quaternion.identity);
+            target = Person.transform;
             AudioSource.PlayClipAtPoint(PackageSFX, Camera.main.transform.position);
             
 
@@ -128,10 +84,11 @@ public class Delivery : MonoBehaviour
 
             hasPackage = false;
             spriteRenderer.color = noPickedColor;
+            other.transform.position = RandomPosition();
+            Person = other.gameObject;
             other.gameObject.SetActive(false);
-            packages[count].SetActive(true);
-            target = packages[count].transform;
-            count = count + 1;
+            target = Package.transform;
+            Package.gameObject.SetActive(true);
             AudioSource.PlayClipAtPoint(PersonSFX, Camera.main.transform.position);
             
         }
@@ -144,5 +101,22 @@ public class Delivery : MonoBehaviour
     {
         currentProgress++;
         progress.SetProgress(currentProgress);
+    }
+
+    public Vector3 RandomPosition()
+    {
+        int choice = UnityEngine.Random.Range( 0, WorldObjectsList.transform.childCount);
+        Transform randomChild = WorldObjectsList.transform.GetChild(choice);
+        
+        while (randomChild.gameObject.tag != "Road")
+        {
+            choice = UnityEngine.Random.Range( 0, WorldObjectsList.transform.childCount);
+            randomChild = WorldObjectsList.transform.GetChild(choice);
+        }
+
+        Vector3 position = new Vector3(randomChild.position.x, randomChild.position.y, -2) ;
+
+        return position;
+
     }
 }
