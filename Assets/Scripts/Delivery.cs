@@ -17,6 +17,7 @@ public class Delivery : MonoBehaviour
 
     List<GameObject> gameObjects = new List<GameObject>();
     List<GameObject> packages = new List<GameObject>();
+    List<GameObject> Hearts = new List<GameObject>();
 
     [SerializeField] GameObject g;
     [SerializeField] GameObject g2;
@@ -34,6 +35,15 @@ public class Delivery : MonoBehaviour
     [SerializeField] GameObject p5;
     [SerializeField] GameObject p6;
     [SerializeField] GameObject p7;
+    
+    [SerializeField] GameObject h;
+    [SerializeField] GameObject h2;
+    [SerializeField] GameObject h3;
+    [SerializeField] GameObject h4;
+    [SerializeField] GameObject h5;
+    [SerializeField] GameObject h6;
+    [SerializeField] GameObject h7;
+    
 
     int n = 0;
     int count = 0;
@@ -64,6 +74,14 @@ public class Delivery : MonoBehaviour
         packages.Add(p5);
         packages.Add(p6);
         packages.Add(p7);
+        
+        Hearts.Add(h);
+        Hearts.Add(h2);
+        Hearts.Add(h3);
+        Hearts.Add(h4);
+        Hearts.Add(h5);
+        Hearts.Add(h6);
+        Hearts.Add(h7);
         currentProgress = minProgress;
         progress.SetMinProgress(minProgress);
 
@@ -88,6 +106,7 @@ public class Delivery : MonoBehaviour
             spriteRenderer.color = pickedColor;
             other.gameObject.SetActive(false);
             gameObjects[n].SetActive(true);
+            Hearts[n].SetActive(true);
             target = gameObjects[n].transform;
             n = n + 1;
 
@@ -107,6 +126,7 @@ public class Delivery : MonoBehaviour
             packages[count].SetActive(true);
             target = packages[count].transform;
             count = count + 1;
+            
         }
 
 
