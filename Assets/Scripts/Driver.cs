@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,20 +11,18 @@ public class Driver : MonoBehaviour
     [SerializeField] float steerSpeed = 200f;
     [SerializeField] float moveSpeed = 7.5f;
     [SerializeField] int maxHealth = 100;
-    [SerializeField] int currentHealth = 100;
+    [SerializeField] public int currentHealth;
 
     public Health healthbar;
 
     [SerializeField] AudioClip hitSFX;
     [SerializeField] AudioClip heartSFX;
 
-    public GameObject _GameOverPanel;
-    
 
     private void Start()
     {
-        currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        healthbar.SetHealth(currentHealth);
 
     }
     // Update is called once per frame
@@ -40,6 +39,20 @@ public class Driver : MonoBehaviour
         TakeDamage(3);
         if (currentHealth <= 0)
         {
+            string playerPath = Path.Combine(Application.persistentDataPath, "PlayerSave.json");
+            string carPath = Path.Combine(Application.persistentDataPath, "CarSave.json");
+            
+            if (File.Exists(playerPath))
+            {
+                File.Delete(playerPath);
+                Debug.Log("Deleted: " + playerPath);
+            }
+
+            if (File.Exists(carPath))
+            {
+                File.Delete(carPath);
+                Debug.Log("Deleted: " + carPath);
+            }
             GameOver();
         }
         

@@ -11,6 +11,7 @@ TagManager:
   - Heart
   - Driver
   - Road
+  - SaveManager
   layers:
   - Default
   - TransparentFX

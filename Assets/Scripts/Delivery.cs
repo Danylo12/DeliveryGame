@@ -26,7 +26,7 @@ public class Delivery : MonoBehaviour
 
     public Progress progress;
     [SerializeField] int minProgress;
-    [SerializeField] int currentProgress;
+    [SerializeField] public int currentProgress;
 
     [SerializeField] AudioClip PackageSFX;
     [SerializeField] AudioClip PersonSFX;
@@ -40,8 +40,8 @@ public class Delivery : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        currentProgress = minProgress;
         progress.SetMinProgress(minProgress);
+        progress.SetProgress(currentProgress);
 
     }
 
