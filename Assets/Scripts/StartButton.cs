@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public SaveSystem sav;
+    public PlayerData data;
     public void LoadScene()
     {
-        sav = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveSystem>();
-        sav.SetDefaulData();
-        SceneManager.LoadScene("SampleScene");
+        data = SaveManager.SetDefaulData();
+        SceneManager.LoadScene("GameScene");
     }
     
 }

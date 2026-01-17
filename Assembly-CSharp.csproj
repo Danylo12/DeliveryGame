@@ -51,6 +51,7 @@
     <Compile Include="Assets/Scripts/ComeBack.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/CharacterAnimation.cs" />
     <Compile Include="Assets/Scripts/PlayerData.cs" />
+    <Compile Include="Assets/Scripts/RestoreSaveBtn.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnIsAliveChangedEvent.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/AnimationSlider.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/Example Scene Scripts/Readme.cs" />
@@ -76,7 +77,6 @@
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/NoobGameDevUtilities/PrefabUtilities.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/OnCurrentHealthChanged.cs" />
     <Compile Include="Assets/HealthHeartSystem/Scripts/PlayerStats.cs" />
-    <Compile Include="Assets/Scripts/SaveSystem.cs" />
     <Compile Include="Assets/Scripts/Counter.cs" />
     <Compile Include="Assets/Scripts/Delivery.cs" />
     <Compile Include="Assets/Scripts/SkinButton.cs" />
