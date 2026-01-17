@@ -19339,6 +19339,7 @@ GameObject:
   - component: {fileID: 430982788}
   - component: {fileID: 430982787}
   - component: {fileID: 430982786}
+  - component: {fileID: 430982789}
   m_Layer: 0
   m_Name: Package
   m_TagString: Package
@@ -19458,6 +19459,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430982789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430982785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f151e781c7b64c48a12df4b49edcafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packageSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  person: {fileID: 2109274080}
+  Heart: {fileID: 3867180132530946125, guid: c5d845c18210847309e97b5b6d19cc1b, type: 3}
 --- !u!1 &435196581
 GameObject:
   m_ObjectHideFlags: 0
@@ -25280,6 +25296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart
       objectReference: {fileID: 0}
+    - target: {fileID: 7150185455207579535, guid: c5d845c18210847309e97b5b6d19cc1b, type: 3}
+      propertyPath: heartSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33002,17 +33022,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &749044188 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4138089994094880135, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
-  m_PrefabInstance: {fileID: 1013067718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7fe6aef1ac374b41bbeeda0d9e9ca84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &759122603
 GameObject:
   m_ObjectHideFlags: 0
@@ -54911,7 +54920,6 @@ GameObject:
   - component: {fileID: 1276206273}
   - component: {fileID: 1276206275}
   - component: {fileID: 1276206277}
-  - component: {fileID: 1276206278}
   - component: {fileID: 1276206282}
   - component: {fileID: 1276206281}
   - component: {fileID: 1276206280}
@@ -55065,27 +55073,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85573435, y: 1.9113047}
   m_EdgeRadius: 0
---- !u!114 &1276206278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276206271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ea81cc3341b4fdb87dcfe4128cf11a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPackage: 0
-  progress: {fileID: 749044188}
-  WorldObjectsList: {fileID: 1362898810}
-  Person: {fileID: 2109274080}
-  Package: {fileID: 430982785}
-  Heart: {fileID: 3867180132530946125, guid: c5d845c18210847309e97b5b6d19cc1b, type: 3}
-  PackageSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
-  PersonSFX: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
-  driverRender: {fileID: 0}
 --- !u!114 &1276206279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55098,8 +55085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc50d1b8fce094ca88b847cdc3e48c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
-  heartSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
 --- !u!114 &1276206280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55112,7 +55097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ee2f4dcc42149888b909a4895fa56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  del: {fileID: 0}
 --- !u!114 &1276206281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55128,6 +55112,7 @@ MonoBehaviour:
   healt: {fileID: 0}
   currentHealth: 0
   audio: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
 --- !u!114 &1276206282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57929,7 +57914,7 @@ GameObject:
   - component: {fileID: 1362898811}
   m_Layer: 0
   m_Name: World Objects
-  m_TagString: Untagged
+  m_TagString: WorldObjects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63227,7 +63212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270edb56719e343a98ba43eb5831c387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  del: {fileID: 0}
 --- !u!1 &1491533777
 GameObject:
   m_ObjectHideFlags: 0
@@ -89533,6 +89517,7 @@ GameObject:
   - component: {fileID: 2109274083}
   - component: {fileID: 2109274082}
   - component: {fileID: 2109274081}
+  - component: {fileID: 2109274084}
   m_Layer: 0
   m_Name: Person
   m_TagString: Person
@@ -89652,6 +89637,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2109274084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109274080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6937d76b3b2e436babafaace359e97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personSFX: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  package: {fileID: 430982785}
+  progress: {fileID: 0}
 --- !u!1 &2113088027
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Back.cs" />
     <Compile Include="Assets/Scripts/HealthManager.cs" />
+    <Compile Include="Assets/Scripts/PersonLogic.cs" />
     <Compile Include="Assets/Scripts/FindRandomPosition.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/CurrentHealth.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/Bar/FollowCameraRotation.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets/Scripts/GamePlay.cs" />
     <Compile Include="Assets/Scripts/FollowCamera.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/NoobGameDevUtilities/Utilities.cs" />
+    <Compile Include="Assets/Scripts/PackageLogic.cs" />
     <Compile Include="Assets/SHarmid/Simple Icons - Classic/Icons/smth.cs" />
     <Compile Include="Assets/Scripts/Tutorial.cs" />
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnMaximumHealthChanged/MaximumHealth.cs" />
@@ -86,7 +88,6 @@
     <Compile Include="Assets/NoobGameDev/Health System For Dummies/System/UnityEvents/OnCurrentHealthChanged/OnCurrentHealthChanged.cs" />
     <Compile Include="Assets/HealthHeartSystem/Scripts/PlayerStats.cs" />
     <Compile Include="Assets/Scripts/Counter.cs" />
-    <Compile Include="Assets/Scripts/Delivery.cs" />
     <Compile Include="Assets/Scripts/SkinButton.cs" />
     <Compile Include="Assets/Scripts/Drive.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

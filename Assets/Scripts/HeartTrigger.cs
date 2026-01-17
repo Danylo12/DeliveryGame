@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class HeartTrigger : MonoBehaviour
 {
-    public HealthManager health;
-    public AudioManager audio;
+    private HealthManager health;
+    private AudioManager audio;
+    [SerializeField] AudioClip heartSFX;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -16,7 +17,7 @@ public class HeartTrigger : MonoBehaviour
             health = other.GetComponent<HealthManager>();
             audio = other.GetComponent<AudioManager>();
             Destroy(gameObject);
-            audio.AudioHealth();
+            audio.AudioPlaySmth(heartSFX);
             health.addHealth(5);
         }
     }

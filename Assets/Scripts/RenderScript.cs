@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class RenderScript : MonoBehaviour
 {
-    public Delivery del;
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        del = GetComponent<Delivery>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
     }
@@ -22,7 +20,7 @@ public class RenderScript : MonoBehaviour
     
     public void ChangeColor()
     {
-        if (!del.hasPackage)
+        if (!GamePlay.hasPackage)
         {
             spriteRenderer.color = GameConstants.noPickedColor;
         }

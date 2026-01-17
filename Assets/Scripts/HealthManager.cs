@@ -5,9 +5,10 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Health healt;
+    private Health healt;
     public int currentHealth;
-    public AudioManager audio;
+    private AudioManager audio;
+    [SerializeField] AudioClip hitSFX;
     void Start()
     {
         healt = GameObject.FindGameObjectWithTag(GameConstants.TAG_HEALTH).GetComponent<Health>();
@@ -27,7 +28,7 @@ public class HealthManager : MonoBehaviour
     {
         
         currentHealth -= damage;
-        audio.AudioHit();
+        audio.AudioPlaySmth(hitSFX);
         healt.SetHealth(currentHealth);
     }
     

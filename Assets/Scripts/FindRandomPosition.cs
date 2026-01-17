@@ -5,15 +5,16 @@ using UnityEngine;
 
 public static class FindRandomPosition 
 {
-    public static  Vector3 RandomPosition(GameObject WorldObjectsList)
+    public static  Vector3 RandomPosition()
     {
-        
-        int choice = Random.Range( 0, WorldObjectsList.transform.childCount);
+        Debug.Log(GameObject.FindGameObjectWithTag(GameConstants.TAG_WO));
+        GameObject WorldObjectsList = GameObject.FindGameObjectWithTag(GameConstants.TAG_WO);
+        int choice = Random.Range(0, WorldObjectsList.transform.childCount);
         Transform randomChild = WorldObjectsList.transform.GetChild(choice);
         
         while (randomChild.gameObject.tag != GameConstants.TAG_ROAD)
         {
-            choice = UnityEngine.Random.Range( 0, WorldObjectsList.transform.childCount);
+            choice = Random.Range(0, WorldObjectsList.transform.childCount);
             randomChild = WorldObjectsList.transform.GetChild(choice);
         }
 

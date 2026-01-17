@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CarCollision : MonoBehaviour
 {
-    public HealthManager health;
+    private HealthManager health;
 
-    public DeleteFile delete;
+    private DeleteFile delete;
     // Start is called before the first frame update
     void Start()
     {

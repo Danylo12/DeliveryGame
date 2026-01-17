@@ -7,12 +7,9 @@ public class Pointer : MonoBehaviour
     Transform target;
 
     private Transform pointer;
-
-    public Delivery del;
     // Start is called before the first frame update
     void Start()
     {
-        del = GameObject.FindGameObjectWithTag(GameConstants.TAG_PLAYER).GetComponent<Delivery>();
         pointer = GetComponent<Transform>();
     }
 
@@ -31,7 +28,7 @@ public class Pointer : MonoBehaviour
 
     public void FindTarget()
     {
-        if (!del.hasPackage)
+        if (!GamePlay.hasPackage)
         {
             target = GameObject.FindGameObjectWithTag(GameConstants.TAG_PACKAGE).transform;
         }

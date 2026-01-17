@@ -16,6 +16,7 @@ public static class GameConstants
     public const string TAG_ROAD = "Road";
     public const string TAG_PROGRESS = "Progress";
     public const string TAG_HEALTH = "Health";
+    public const string TAG_WO = "WorldObjects";
     #endregion
 
     #region Names
@@ -36,6 +37,8 @@ public static class GameConstants
     public const float steerSpeed = 200f;
     public const float moveSpeed = 7.5f;
     public const int maxHealth = 100;
+    //public static readonly GameObject WorldObjectsList = GameObject.FindGameObjectWithTag(TAG_WO);
+
     #endregion
     
     #region Path
