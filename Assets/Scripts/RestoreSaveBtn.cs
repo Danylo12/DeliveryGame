@@ -71,20 +71,20 @@ public class RestoreSaveBtn : MonoBehaviour
     }
     public void RestoreGameScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(GameConstants.SCENE_GAME);
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene loaded! Searching for objects to restore...");
 
-        GameObject btnSaveObj = GameObject.Find("Btn_Save"); 
+        GameObject btnSaveObj = GameObject.Find(GameConstants.SAVE_BUTTON); 
         if (btnSaveObj != null)
         {
             SaveButton = btnSaveObj.GetComponent<Button>();
             DebugForButton(SaveButton, ButtonSavePressed);
         }
 
-        GameObject btnRestoreObj = GameObject.Find("Btn_Restore"); 
+        GameObject btnRestoreObj = GameObject.Find(GameConstants.RESTORE_BUTTON); 
         if (btnRestoreObj != null)
         {
             RestoreButton = btnRestoreObj.GetComponent<Button>();

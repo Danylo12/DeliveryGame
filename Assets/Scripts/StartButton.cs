@@ -10,7 +10,7 @@ public class StartButton : MonoBehaviour
     public void LoadScene()
     {
         data = SaveManager.SetDefaulData();
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(GameConstants.SCENE_GAME);
     }
     
 }

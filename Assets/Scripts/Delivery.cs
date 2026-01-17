@@ -7,9 +7,6 @@ using UnityEngine.Animations;
 
 public class Delivery : MonoBehaviour
 {
-    [SerializeField] Color32 pickedColor = new Color32(1, 1, 1, 1);
-    [SerializeField] Color32 noPickedColor = new Color32(0, 0, 0, 0);
-
     [SerializeField] Transform pointer;
     [SerializeField] Transform target;
 
@@ -17,15 +14,13 @@ public class Delivery : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    [SerializeField] GameObject Person;
-
-    [SerializeField] GameObject Package;
     
+    [SerializeField] GameObject Person;
+    [SerializeField] GameObject Package;
     [SerializeField] GameObject Heart;
     
 
     public Progress progress;
-    [SerializeField] int minProgress;
     [SerializeField] public int currentProgress;
 
     [SerializeField] AudioClip PackageSFX;
@@ -40,7 +35,7 @@ public class Delivery : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        progress.SetMinProgress(minProgress);
+        progress.SetMinProgress(GameConstants.minProgress);
         progress.SetProgress(currentProgress);
 
     }
@@ -58,10 +53,10 @@ public class Delivery : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Package" && !hasPackage)
+        if (other.tag == GameConstants.TAG_PACKAGE && !hasPackage)
         {
             hasPackage = true;
-            spriteRenderer.color = pickedColor;
+            spriteRenderer.color = GameConstants.pickedColor;
             other.transform.position = RandomPosition();
             Package = other.gameObject;
             other.gameObject.SetActive(false);
@@ -74,7 +69,7 @@ public class Delivery : MonoBehaviour
 
         }
 
-        if (other.tag == "Person" && hasPackage)
+        if (other.tag == GameConstants.TAG_PERSON && hasPackage)
         {
             addProgress();
             if (currentProgress == 8)
@@ -83,7 +78,7 @@ public class Delivery : MonoBehaviour
             }
 
             hasPackage = false;
-            spriteRenderer.color = noPickedColor;
+            spriteRenderer.color = GameConstants.noPickedColor;
             other.transform.position = RandomPosition();
             Person = other.gameObject;
             other.gameObject.SetActive(false);
@@ -108,7 +103,7 @@ public class Delivery : MonoBehaviour
         int choice = UnityEngine.Random.Range( 0, WorldObjectsList.transform.childCount);
         Transform randomChild = WorldObjectsList.transform.GetChild(choice);
         
-        while (randomChild.gameObject.tag != "Road")
+        while (randomChild.gameObject.tag != GameConstants.TAG_ROAD)
         {
             choice = UnityEngine.Random.Range( 0, WorldObjectsList.transform.childCount);
             randomChild = WorldObjectsList.transform.GetChild(choice);

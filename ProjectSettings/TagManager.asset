@@ -6,12 +6,9 @@ TagManager:
   tags:
   - Package
   - Person
-  - Boost
-  - 2ndCanvas
   - Heart
   - Driver
   - Road
-  - SaveManager
   layers:
   - Default
   - TransparentFX

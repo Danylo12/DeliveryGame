@@ -8,9 +8,6 @@ using UnityEngine.SceneManagement;
 public class Driver : MonoBehaviour
 {
     
-    [SerializeField] float steerSpeed = 200f;
-    [SerializeField] float moveSpeed = 7.5f;
-    [SerializeField] int maxHealth = 100;
     [SerializeField] public int currentHealth;
 
     public Health healthbar;
@@ -21,15 +18,15 @@ public class Driver : MonoBehaviour
 
     private void Start()
     {
-        healthbar.SetMaxHealth(maxHealth);
+        healthbar.SetMaxHealth(GameConstants.maxHealth);
         healthbar.SetHealth(currentHealth);
 
     }
     // Update is called once per frame
     void Update() // this method is callback
     {
-        float steerAmount = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
-        float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        float steerAmount = Input.GetAxis("Horizontal") * GameConstants.steerSpeed * Time.deltaTime;
+        float moveAmount = Input.GetAxis("Vertical") * GameConstants.moveSpeed * Time.deltaTime;
         transform.Rotate(0, 0, -steerAmount); // Transform - is a class (component from object), Rotate() - is a method from Unity, 0,1f - we got f in the end for making it float
         transform.Translate(0, moveAmount, 0);
     }
@@ -39,8 +36,7 @@ public class Driver : MonoBehaviour
         TakeDamage(3);
         if (currentHealth <= 0)
         {
-            string playerPath = Path.Combine(Application.persistentDataPath, "PlayerSave.json");
-            string carPath = Path.Combine(Application.persistentDataPath, "CarSave.json");
+            string playerPath = Path.Combine(Application.persistentDataPath, GameConstants.SAVE_FILE);
             
             if (File.Exists(playerPath))
             {
@@ -48,11 +44,6 @@ public class Driver : MonoBehaviour
                 Debug.Log("Deleted: " + playerPath);
             }
 
-            if (File.Exists(carPath))
-            {
-                File.Delete(carPath);
-                Debug.Log("Deleted: " + carPath);
-            }
             GameOver();
         }
         
@@ -68,17 +59,17 @@ public class Driver : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene(GameConstants.SCENE_GAMEOVER);
     }
 
     public void WinScene()
     {
-        SceneManager.LoadScene("WinScene");
+        SceneManager.LoadScene(GameConstants.SCENE_WIN);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Heart")
+        if (other.tag == GameConstants.TAG_HEART)
         {
             AudioSource.PlayClipAtPoint(heartSFX, Camera.main.transform.position);
             addHealth(5);

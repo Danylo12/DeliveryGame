@@ -54935,9 +54935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e89f3fcffe24b04aac8a90f23ac5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steerSpeed: 200
-  moveSpeed: 7.5
-  maxHealth: 100
   currentHealth: 0
   healthbar: {fileID: 921987828}
   hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
@@ -55094,19 +55091,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ea81cc3341b4fdb87dcfe4128cf11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickedColor:
-    serializedVersion: 2
-    rgba: 4278246399
-  noPickedColor:
-    serializedVersion: 2
-    rgba: 4294967295
   pointer: {fileID: 1490833033}
   target: {fileID: 430982788}
   Person: {fileID: 2109274080}
   Package: {fileID: 430982785}
   Heart: {fileID: 3867180132530946125, guid: c5d845c18210847309e97b5b6d19cc1b, type: 3}
   progress: {fileID: 749044188}
-  minProgress: 0
   currentProgress: 0
   PackageSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   PersonSFX: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}

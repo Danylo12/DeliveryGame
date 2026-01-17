@@ -9,7 +9,7 @@ public class HeartTrigger : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Driver")
+        if (other.tag == GameConstants.TAG_PLAYER)
         {
             Destroy(gameObject);
         }

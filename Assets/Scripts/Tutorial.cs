@@ -7,6 +7,6 @@ public class Tutorial : MonoBehaviour
 {
     public void loadTutorial()
     {
-        SceneManager.LoadScene("tutorialScene");
+        SceneManager.LoadScene(GameConstants.SCENE_TUTORIAL);
     }
 }

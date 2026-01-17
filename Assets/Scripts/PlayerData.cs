@@ -21,22 +21,19 @@ public static class SaveManager
     {
         string json = JsonUtility.ToJson(data, true);
         
-        string path = Path.Combine(Application.persistentDataPath, "Save.json");
+        File.WriteAllText(GameConstants.path, json);
         
-        File.WriteAllText(path, json);
-        
-        Debug.Log("Saved to: " + path);
+        Debug.Log("Saved to: " + GameConstants.path);
     }
     
     public static PlayerData RestorePLayerData()
     {
-        string path = Path.Combine(Application.persistentDataPath, "Save.json");
 
-        if (File.Exists(path))
+        if (File.Exists(GameConstants.path))
         {
-            string json = File.ReadAllText(path);
+            string json = File.ReadAllText(GameConstants.path);
 
-            Debug.Log("Returned from: " + path);
+            Debug.Log("Returned from: " + GameConstants.path);
 
             return JsonUtility.FromJson<PlayerData>(json);
         }
@@ -54,17 +51,17 @@ public static class SaveManager
         if (data != null)
         {
 
-            GameObject[] heartobjs = GameObject.FindGameObjectsWithTag("Heart");
+            GameObject[] heartobjs = GameObject.FindGameObjectsWithTag(GameConstants.TAG_HEART);
             for(int i = 0; i < heartobjs.Length; i++)
             {
                 heartobjs[i].transform.position = data.HeartPositions[i];
             }
-            GameObject packageObj = GameObject.FindWithTag("Package"); 
+            GameObject packageObj = GameObject.FindWithTag(GameConstants.TAG_PACKAGE); 
             if (packageObj != null)
             {
                 packageObj.transform.position = data.PackagePosition;
             }
-            GameObject playerCar = GameObject.FindWithTag("Driver"); 
+            GameObject playerCar = GameObject.FindWithTag(GameConstants.TAG_PLAYER); 
             if (playerCar != null)
             {
                 playerCar.transform.position = data.position;
