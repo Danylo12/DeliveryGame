@@ -9,6 +9,8 @@ TagManager:
   - Heart
   - Driver
   - Road
+  - Progress
+  - Health
   layers:
   - Default
   - TransparentFX

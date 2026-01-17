@@ -67,14 +67,20 @@ public static class SaveManager
                 playerCar.transform.position = data.position;
                 playerCar.transform.rotation = data.rotation;
                 Debug.Log(data.Health);
-                playerCar.GetComponent<Driver>().currentHealth = data.Health;
-                Debug.Log(playerCar.GetComponent<Driver>().currentHealth);
-                Debug.Log(data.Score);
-                playerCar.GetComponent<Delivery>().currentProgress = data.Score;
-                Debug.Log(playerCar.GetComponent<Delivery>().currentProgress);
+                playerCar.GetComponent<HealthManager>().currentHealth = data.Health;
+                Debug.Log(playerCar.GetComponent<HealthManager>().currentHealth);
                 Debug.Log("Car moved to saved position.");
             }
-            
+
+            GameObject progres = GameObject.FindWithTag(GameConstants.TAG_PROGRESS);
+            if (progres != null)
+            {
+                Debug.Log(data.Score);
+                progres.GetComponent<Progress>().currentProgress = data.Score;
+                Debug.Log(progres.GetComponent<Progress>().currentProgress);
+            }
+
+
         }
     }
     
@@ -94,7 +100,7 @@ public static class SaveManager
     {
         data = new PlayerData();
         data.Health = 30;
-        data.Score = 5;
+        data.Score = 7;
         data.position = new Vector3(4.46f, 15.37f, -2f);
         data.rotation = new Quaternion (0,0,90,0);
         data.HeartPositions.Add(new Vector3(4.46f, 19.37f, -2f));

@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class Progress : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int currentProgress;
+    void Start()
+    {
+        SetMinProgress(GameConstants.minProgress);
+        SetProgress(currentProgress);
+
+    }
 
     public Slider slider;
 
@@ -19,4 +25,14 @@ public class Progress : MonoBehaviour
     {
         slider.value = progress;
     }
+    public void addProgress()
+    {
+        currentProgress++;
+        SetProgress(currentProgress);
+        if (currentProgress == 8)
+        {
+            GamePlay.WinScene();
+        }
+    }
+    
 }

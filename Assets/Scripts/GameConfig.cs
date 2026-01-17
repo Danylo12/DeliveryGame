@@ -14,6 +14,8 @@ public static class GameConstants
     public const string TAG_PERSON = "Person";
     public const string TAG_HEART = "Heart";
     public const string TAG_ROAD = "Road";
+    public const string TAG_PROGRESS = "Progress";
+    public const string TAG_HEALTH = "Health";
     #endregion
 
     #region Names

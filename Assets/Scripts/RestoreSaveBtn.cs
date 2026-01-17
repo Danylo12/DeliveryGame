@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.Localization;
-using UnityEditor.U2D.Animation;
+using UnityEngine.U2D.Animation;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;

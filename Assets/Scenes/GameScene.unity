@@ -40206,17 +40206,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &921987828 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3598257726447729831, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
-  m_PrefabInstance: {fileID: 1013067718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7a6853e45e94b358e87e08d6afc9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &924907294
 GameObject:
   m_ObjectHideFlags: 0
@@ -43834,6 +43823,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1049850843761243788, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
+      propertyPath: m_TagString
+      value: Progress
+      objectReference: {fileID: 0}
     - target: {fileID: 2300365804949506584, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
       propertyPath: ob
       value: 
@@ -43937,6 +43930,10 @@ PrefabInstance:
     - target: {fileID: 7707010327455357576, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023365370772993514, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
+      propertyPath: m_TagString
+      value: Health
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5520645481444157713, guid: 2df4225f0561e46689f7811fa8893a32, type: 3}
@@ -54912,10 +54909,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1276206274}
   - component: {fileID: 1276206273}
-  - component: {fileID: 1276206272}
   - component: {fileID: 1276206275}
   - component: {fileID: 1276206277}
   - component: {fileID: 1276206278}
+  - component: {fileID: 1276206282}
+  - component: {fileID: 1276206281}
+  - component: {fileID: 1276206280}
+  - component: {fileID: 1276206279}
+  - component: {fileID: 1276206284}
+  - component: {fileID: 1276206283}
   m_Layer: 0
   m_Name: Driver
   m_TagString: Driver
@@ -54923,22 +54925,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1276206272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276206271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e89f3fcffe24b04aac8a90f23ac5a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  healthbar: {fileID: 921987828}
-  hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
-  heartSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
 --- !u!212 &1276206273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -55091,17 +55077,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ea81cc3341b4fdb87dcfe4128cf11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointer: {fileID: 1490833033}
-  target: {fileID: 430982788}
+  hasPackage: 0
+  progress: {fileID: 749044188}
+  WorldObjectsList: {fileID: 1362898810}
   Person: {fileID: 2109274080}
   Package: {fileID: 430982785}
   Heart: {fileID: 3867180132530946125, guid: c5d845c18210847309e97b5b6d19cc1b, type: 3}
-  progress: {fileID: 749044188}
-  currentProgress: 0
   PackageSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   PersonSFX: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
-  WorldObjectsList: {fileID: 1362898810}
-  driver: {fileID: 1276206272}
+  driverRender: {fileID: 0}
+--- !u!114 &1276206279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc50d1b8fce094ca88b847cdc3e48c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSFX: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
+  heartSFX: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+--- !u!114 &1276206280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ee2f4dcc42149888b909a4895fa56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  del: {fileID: 0}
+--- !u!114 &1276206281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a30b8f9b999948b3ab178fb705f3c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: {fileID: 0}
+  currentHealth: 0
+  audio: {fileID: 0}
+--- !u!114 &1276206282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b3e618045114bd7bfd113b8978cb48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1276206283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3297d12a97db41a8a2c7be680507864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+  delete: {fileID: 0}
+--- !u!114 &1276206284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276206271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc35538f59bf74a8aaa13fbebec9a49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276556626
 GameObject:
   m_ObjectHideFlags: 0
@@ -63076,6 +63140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490833033}
   - component: {fileID: 1490833034}
+  - component: {fileID: 1490833035}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -63150,6 +63215,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1490833035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490833032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270edb56719e343a98ba43eb5831c387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  del: {fileID: 0}
 --- !u!1 &1491533777
 GameObject:
   m_ObjectHideFlags: 0
